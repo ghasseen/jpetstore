@@ -20,6 +20,9 @@
   connection: local
   tasks:
     - name: Update apt package cache
+      become: yes
+      become_method: sudo
+      become_user: root
       apt:
         update_cache: yes   
 

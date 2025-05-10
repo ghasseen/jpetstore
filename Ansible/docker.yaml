@@ -26,7 +26,7 @@
     - name: Build Docker Image
       command: docker build -t pipeline .
       args:
-        chdir: /home/ubuntu/jpetstore1
+        chdir: /var/lib/jenkins/workspace/pipeline
     - name: tag image
       command: docker tag pipeline:latest ghasseen/pipeline:latest 
 
